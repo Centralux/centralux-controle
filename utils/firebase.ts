@@ -13,7 +13,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+const database = getDatabase(app, 'https://centralux-estoque-default-rtdb.firebaseio.com');
 
 export const saveDataToFirebase = async (id: string, data: any): Promise<boolean> => {
   try {
